@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+
+  <body style="overflow:auto">
+    <header>
+      <!--flex rem less echar 旋转地图  时间   自定义字体 有序列表 -->
+        <span id="theme"> <h1>软件项目实战-学生出勤详情-讲师-张太宇</h1></span>
+      <div class="showTime">当前时间：2020年3月17日0时54分14秒</div>
+      <script>
+        var t = null;
+        t = setTimeout(time, 1000); //開始运行
+        function time() {
+          clearTimeout(t); //清除定时器
+          dt = new Date();
+          var y = dt.getFullYear();
+          var mt = dt.getMonth() + 1;
+          var day = dt.getDate();
+          var h = dt.getHours(); //获取时
+          var m = dt.getMinutes(); //获取分
+          var s = dt.getSeconds(); //获取秒
+          document.querySelector(".showTime").innerHTML =
+            "当前时间：" +
+            y +
+            "年" +
+            mt +
+            "月" +
+            day +
+            "-" +
+            h +
+            "时" +
+            m +
+            "分" +
+            s +
+            "秒";
+          t = setTimeout(time, 1000); //设定定时器，循环运行
+        }
+      </script>
+    </header>
+    <section class="mainbox">
+      <div class="column">
+        <div class="panel pie">
+         <span id="classnametwo"><h2>本节课本班-签到情况</h2></span>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+
+        <div class="panel line">
+          <h2>本课所有学生-签到数量变化</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+
+        <div class="panel bar">
+          <h2>厚德 博学 笃行 自强</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="map">
+          <div class="chart">
+            <ul style="margin-bottom: 0.06rem;">
+              <li style="font-size: 0.225rem;">学号</li>
+              <li style="font-size: 0.225rem;">姓名</li>
+              <li style="font-size: 0.225rem;">是否签到</li>
+              <li style="font-size: 0.225rem;">签到时间</li>
+            </ul>
+              <span id="tabs">
+                   <ul >
+                <li>1740110301</li>
+                <li>曹帅</li>
+                <li>已签到</li>
+                <li>10:00:00</li>
+            </ul>
+            <ul >
+                <li>1740110303</li>
+                <li>陈浩然</li>
+                <li>已签到</li>
+                <li>10:00:00</li>
+            </ul>
+</span>
+
+          </div>
+          <div class="map1"></div>
+          <div class="map2"></div>
+          <div class="map3"></div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="panel pie1">
+         <span id="classname"><h2>本节课本班-签到统计</h2></span>
+          <!-- <div class="chart"> -->
+          <div class="no">
+            <div class="no-hd">
+              <ul id="number">
+                <li>36</li>
+                <li>34</li>
+                <li>2</li>
+                <li style="color: #ed3f35;">0</li>
+              </ul>
+            </div>
+            <div class="no-bd">
+              <ul>
+                <li>应到</li>
+                <li>实到</li>
+                <li>请假</li>
+                <li>缺勤</li>
+              </ul>
+            </div>
+          </div>
+          <!-- </div> -->
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel line1">
+          <h2>本课所有学生-签到数量变化</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+
+        <div class="panel bar1">
+          <h2>制作详情</h2>
+          <div class="chart">
+            <div class="nos">
+				<!-- 1 -->
+              <div class="no-hds">
+                <ul>
+                  <li>考勤系统测试版</li>
+                  <li>出勤详情</li>
+                </ul>
+              </div>
+			  <div class="no-bds">
+			    <ul>
+			      <li>项目名称</li>
+			      <li>任务名称</li>
+			    </ul>
+			  </div>			 
+			  <!-- 2-->
+			  <div class="no-hds">
+			    <ul>
+			      <li>10.13</li>
+			      <li>10.27</li>
+			    </ul>
+			  </div>
+              <div class="no-bds">
+                <ul>
+                  <li>项目开始时间</li>
+                  <li>项目预期结束时间</li>
+                </ul>
+              </div>
+			 <!-- 3-->
+			 <div class="no-hds">
+			   <ul>
+			     <li>10.13</li>
+			     <li>10.27</li>
+			   </ul>
+			 </div>
+			  <div class="no-bds">
+			    <ul>
+			      <li>项目预期开始时间</li>
+			      <li>项目预期结束时间</li>
+			    </ul>
+			  </div>
+			  <!-- 4-->
+			  <div class="no-hds">
+			    <ul>
+			      <li>17*******3郭健</li>
+			      <li>17*******2曾婉莹</li>
+			    </ul>
+			  </div>
+			  <div class="no-bds">
+			    <ul>
+			      <li>后台制作人</li>
+			      <li>前端制作人</li>
+			    </ul>
+			  </div>
+            </div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+   </div>
+	</section>
+    <script src="js/flexible.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/china.js"></script>
+    <script src="js/myMap.js"></script>
+
+  </body>
+</html>
